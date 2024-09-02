@@ -1,0 +1,5 @@
+ubuntu版本为14.04，安装编译kenerl后更新grub从内核4.2.3max启动。在编译内核前，按照 https://blog.csdn.net/qq_34905587/article/details/107386659 修改Makefile文件，
+按照https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=b21ebf2fb4cde1618915a97cc773e287ff49173e 修改/Arch 文件夹对应的文件。
+disk-tools为f2fs-tools的扩展版本。如果在安装disk-tools过程中出现运行bash ./autogen.sh错误，可以使用f2fs源码中的配置文件替换disk-tools中的对应文件。
+此时在安装后可能会出现无法访问/usr/lib/libf2fs.so.3的错误，利用sudo ln -s /usr/lib/libf2fs.so.3.X.X /usr/lib/libf2fs.so.3
+手动创建符号链接（将 libf2fs.so.3.X.X 替换为实际的库文件版本）。
