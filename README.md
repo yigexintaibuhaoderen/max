@@ -61,6 +61,7 @@ make -j24
 disk-tools/mkfs/mkfs.f2fs -N 8 /dev/nvme0n1
 ```
 Note: the number 8 means the maximum number of mlogs. You can replace it with a proper number lower than 64.
+
 2. Mount the drive
 ```bash
 mount -t max -o imds=72,mlog=8 /dev/nvme0n1 /mnt/test
