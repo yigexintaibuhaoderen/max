@@ -72,6 +72,7 @@ Now, the Max file system is mounted at /mnt/test, storing its data on /dev/nvme0
 
 ## Testing Max with FxMark
 1. Build FxMark
+按照https://github.com/sslab-gatech/fxmark进行安装
 ```bash
 cd fxmark
 make -j24
